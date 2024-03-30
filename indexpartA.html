@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dice Combinations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylespartA.css') }}">
+</head>
+<body>
+    <h1>Dice Combinations and Probabilities</h1>
+    
+    <form id="diceForm">
+        <label for="dieA">Enter face of Die A (1-6):</label>
+        <input type="number" id="dieA" name="dieA" min="1" max="6" value="{{ dieA }}" required>
+        
+        <label for="dieB">Enter face of Die B (1-6):</label>
+        <input type="number" id="dieB" name="dieB" min="1" max="6" value="{{ dieB }}" required>
+        
+        <button type="submit">Roll Dice</button>
+    </form>
+
+    <div id="results" style="display: none;">
+        <h2>All Combinations:</h2>
+        <table id="combinationsTable">
+            <tr>
+                <th>Sum</th>
+                <th>Frequency</th>
+            </tr>
+            {% for sum, frequency in combinations.items() %}
+            <tr>
+                <td>{{ sum }}</td>
+                <td>{{ frequency }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Probabilities:</h2>
+        <table id="probabilitiesTable">
+            <tr>
+                <th>Sum</th>
+                <th>Probability</th>
+            </tr>
+            {% for sum, probability in probabilities.items() %}
+            <tr>
+                <td>{{ sum }}</td>
+                <td>{{ probability }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <script src="{{ url_for('static', filename='scriptpartA.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* Reset some default styles */
+body, h1, form, table {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #8e44ad, #5d329d);
+    color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="number"] {
+    width: 95%; /* Adjusted width */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #9b59b6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8e44ad;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+#combinationsTable, #probabilitiesTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#combinationsTable th, #combinationsTable td,
+#probabilitiesTable th, #probabilitiesTable td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#combinationsTable th, #probabilitiesTable th {
+    background-color: #9b59b6;
+    color: #fff;
+}
+
+#combinationsTable tr:nth-child(even), #probabilitiesTable tr:nth-child(even) {
+    background-color: #8e44ad;
+}
+
+#combinationsTable tr:hover, #probabilitiesTable tr:hover {
+    background-color: #b46bbe;
+}
